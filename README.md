@@ -7,3 +7,10 @@ terminals. Each client will connect to the server and wait for the user input. O
 connected, We can type a message and that message will appear on the other terminals, and it will show which client it came from
 
 This asynchronous chat application is built with `Tokio` and `tokio-websockets`. 
+
+## Modifying the websocket port
+![Image](https://github.com/user-attachments/assets/5b2cdb7c-7837-41ef-b282-6005f3587d9f)
+
+We use the WebSocket protocol (ws://) to connect clients to the server. 
+The server listens to port 8080, and the client connects to the same address using ClientBuilder::from_uri(...). 
+By modifying the server and client to the same port, we ensure there will be a proper connection. 
